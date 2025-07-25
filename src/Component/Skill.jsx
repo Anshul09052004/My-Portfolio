@@ -1,4 +1,3 @@
-import React from "react";
 import { LuChevronsRightLeft } from "react-icons/lu";
 import { GoDatabase } from "react-icons/go";
 import { IoEarth } from "react-icons/io5";

@@ -1,4 +1,3 @@
-import React from 'react'
 import myImg from '../assets/images.png'
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
