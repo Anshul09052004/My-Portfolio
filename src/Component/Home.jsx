@@ -34,7 +34,7 @@ function Home() {
                             </a>
                             </button>
                         <button>
-                            <a href="https://www.linkedin.com/in/anshul-prajapat/" target="_blank" rel="noreferrer">
+                            <a href="mailto:anshulprajapat982@gmail.com" target="_blank" rel="noreferrer">
                             <MdOutlineEmail className='text-4xl text-amber-200 hover:text-amber-300' />
                             </a>
                             </button>
