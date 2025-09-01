@@ -1,64 +1,66 @@
-import myImg from '../assets/images.png';
+import { useState } from "react";
+import HomeImage from '../assets/HomeImage.png'
+import { motion } from "framer-motion";
 
-const Project = () => {
-  const projects = [
-    {
-      image: myImg,
-      title: 'Portfolio Website',
-      description: 'A personal portfolio website built with React and Tailwind CSS.',
-      technologies: ['React', 'Tailwind CSS', 'JavaScript'],
-      demoLink: 'https://your-portfolio-demo.com'
-    },
-    {
-      image: myImg,
-      title: 'Weather App',
-      description: 'Weather forecasting app using OpenWeatherMap API and styled with Tailwind.',
-      technologies: ['React', 'API', 'Tailwind CSS'],
-      demoLink: 'https://your-weather-app.com'
+function Project() {
+  const [activeCard, setActiveCard] = useState(null);
+
+  const handleCardClick = (id, link) => {
+    if (window.innerWidth < 768) {
+      // 👉 Sirf mobile ke liye click logic
+      if (activeCard === id) {
+        window.open(link, "_blank", "noopener,noreferrer");
+        setActiveCard(null);
+      } else {
+        setActiveCard(id);
+      }
     }
-  ];
+  };
 
   return (
-    <section id='project'>
-    <div className=" min-h-screen py-10 px-5">
-      <h2 className="text-3xl text-white text-center underline decoration-8 decoration-amber-300 underline-offset-8 mb-10">
-       My Projects
-      </h2>
+    <section id="project" className="py-16 px-4">
+      <motion.div
+        className="text-white font-bold"
+        initial={{ opacity: 0, y: 100 }}           // start position (hidden)
+        whileInView={{ opacity: 1, y: 0 }}        // scroll hoke view me aaye to animate
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}                 // ek hi baar chale
+      >
+        <div className="text-center mb-8">
+          <p className="text-white text-3xl mb-2">💻 Latest Projects</p>
+          <div className="mx-auto w-40 h-2 bg-amber-300 rounded-full"></div>
+        </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <div key={index} className="bg-amber-200 shadow-md rounded-lg overflow-hidden">
+        <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
+          <div
+            onClick={() =>
+              handleCardClick("prompt-engineer", "https://github.com/Anshul09052004")
+            }
+            className="relative group flex-grow transition-all w-56 h-[400px] duration-500 md:hover:w-full block cursor-pointer"
+          >
             <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-56 bg-cover"
+              className="h-full w-full object-cover object-center"
+              src={HomeImage}
+              alt="image"
             />
-            <div className="p-6">
-              <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-              <p className="text-gray-700 mb-4">{project.description}</p>
-
-              <h4 className="font-medium">Technologies Used:</h4>
-              <ul className="list-disc list-inside mb-4 text-sm text-gray-600">
-                {project.technologies.map((tech, i) => (
-                  <li key={i}>{tech}</li>
-                ))}
-              </ul>
-
-              <a
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 text-blue-600 hover:underline font-semibold"
-              >
-                🔗 Live Demo
-              </a>
+            <div
+              className={`absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 transition-all duration-300 
+              ${activeCard === "prompt-engineer" ? "opacity-100" : "opacity-0"} 
+              md:opacity-0 md:group-hover:opacity-100`}
+            >
+              <h1 className="text-3xl">Prompt engineers</h1>
+              <p className="text-sm">
+                Bridging the gap between human intent and machine understanding
+                through expert prompt design.
+              </p>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+
+      </motion.div>
+
     </section>
   );
-};
+}
 
 export default Project;
