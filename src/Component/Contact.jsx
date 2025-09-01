@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { MdOutlineMail } from "react-icons/md";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
+import { FaWhatsapp } from "react-icons/fa";
+import { MdLocationPin } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
 
 function Contact() {
   const form = useRef();
@@ -76,25 +78,32 @@ function Contact() {
               I’d love to hear from you.
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-3">
               <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-md shadow-md hover:scale-105 transition duration-300">
-                <MdOutlineMail className="text-amber-400 text-2xl" />
-                <a href="mailto:anshulprajapat982@gmail.com" className="underline hover:text-amber-300 transition">
+                <span><MdOutlineMail className="text-amber-400 text-2xl" /></span>
+
+                <a href="mailto:anshulprajapat982@gmail.com" className=" hover:text-amber-300 transition">
                   anshulprajapat982@gmail.com
                 </a>
               </div>
-
               <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-md shadow-md hover:scale-105 transition duration-300">
-                <FaGithub className="text-amber-400 text-2xl" />
-                <a href="https://github.com/Anshul09052004" target="_blank" rel="noreferrer" className="underline hover:text-amber-300 transition">
-                  github.com/Anshul09052004
+                <FaPhone className="text-amber-400 text-2xl" />
+                <a href="tel:+919302408167" className=" hover:text-amber-300 transition">
+                  +91 9302408167
                 </a>
               </div>
 
               <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-md shadow-md hover:scale-105 transition duration-300">
-                <FaLinkedinIn className="text-amber-400 text-2xl" />
-                <a href="https://www.linkedin.com/in/anshul-prajapat/" target="_blank" rel="noreferrer" className="underline hover:text-amber-300 transition">
-                  linkedin.com/in/anshul-prajapat
+                <MdLocationPin className="text-amber-400 text-2xl" />
+
+                Ujjain, Madhya Pradesh, India
+
+              </div>
+
+              <div className=" flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-md shadow-md hover:scale-105 transition duration-300">
+                <FaWhatsapp className="text-amber-400 text-2xl" />
+                <a href="https://web.whatsapp.com/" target="_blank" rel="noreferrer" className="hover:text-amber-300 transition">
+                  Chat on Whatsapp
                 </a>
               </div>
             </div>

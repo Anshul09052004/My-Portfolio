@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HomeImage from '../assets/HomeImage.png'
+import AboutImage from "../assets/AboutImage.png";
 import { motion } from "framer-motion";
 
 function Project() {
@@ -40,7 +40,7 @@ function Project() {
           >
             <img
               className="h-full w-full object-cover object-center"
-              src={HomeImage}
+              src={AboutImage}
               alt="image"
             />
             <div

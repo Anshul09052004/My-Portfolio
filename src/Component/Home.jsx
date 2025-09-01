@@ -1,10 +1,10 @@
-import HomeImage from '../assets/HomeImage.png'
 import { Link } from 'react-scroll'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { motion } from 'framer-motion'
+import HomeImage from '../assets/HomeImage.png'
 
 
 function Home() {
@@ -27,12 +27,35 @@ function Home() {
 
                         {/* Left: Profile Image */}
                         <div className="flex md:justify-start w-full md:w-1/2">
-                            <img
-                                className="ml-11 w-48 h-48 text-white fill-white md:w-60 md:h-60 rounded-full shadow-lg shadow-amber-500/20 border-4 border-gray-800 object-cover"
-                                src={HomeImage}
-                                alt="Profile"
-                            />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1024 1024"
+                                className="ml-11 w-48 h-48 md:w-60 md:h-60 rounded-full shadow-lg shadow-amber-500/20 border-4 border-gray-500 bg-transparent p-4"
+                            >
+                                <g
+                                    fill="none"
+                                    stroke="white"
+                                    strokeWidth="80"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    {/* left chevron shifted left */}
+                                    <path d="M280 360 L140 512 L280 664" />
+
+                                    {/* right chevron shifted right */}
+                                    <path d="M744 360 L884 512 L744 664" />
+
+                                    {/* center slash rotated 45° */}
+                                    <path
+                                        d="M502 170 L566 854"
+                                        transform="rotate(23 512 512)"
+                                    />
+                                </g>
+                            </svg>
                         </div>
+
+
+
 
                         {/* Right: Content */}
                         <div className="text-center md:text-left w-full md:w-1/2 mt-6 md:mt-0">
