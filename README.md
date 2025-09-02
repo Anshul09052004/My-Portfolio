@@ -32,8 +32,8 @@
 🚀 A modern and fully responsive **React Portfolio Website** to showcase my **skills, projects, resume, and contact information**.  
 It’s designed with clean UI, smooth animations, and a professional touch.  
 
-🔗 **Live Demo**: [View Portfolio](https://your-portfolio-link.com)  
-📂 **GitHub Repo**: [Portfolio Repository](https://github.com/yourusername/portfolio)  
+🔗 **Live Demo**: [View Portfolio](https://anshulportfolioooo.netlify.app)  
+📂 **GitHub Repo**: [Portfolio Repository](https://github.com/Anshul09052004/My-Portfolio)  
 
 ---
 
@@ -66,9 +66,9 @@ portfolio/
 │   ├── favicon.ico
 │   └── profile.png
 ├── src/
-│   ├── assets/        # Images, icons, etc.
-│   ├── components/    # Reusable components
-│   ├── pages/         # Page sections (Home, About, Projects, Contact)
+│   ├── assets/        
+│   ├── components/    
+│   ├── pages/      
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
@@ -76,7 +76,7 @@ portfolio/
 
 
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone git@github.com:Anshul09052004/My-Portfolio.git
 
 # Navigate into the project folder
 cd portfolio
