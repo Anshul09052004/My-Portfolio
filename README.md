@@ -1,11 +1,31 @@
 # 🌟 My React Portfolio  
 
+# 🌟 My React Portfolio  
+
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <img src="./src/assets/img1.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-  <img src="./src/assets/img2.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-  <img src="./src/assets/img3.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-  <img src="./src/assets/img4.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./src/assets/img1.jpg" />
+    <img src="./src/assets/img1.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2); max-width: 100%;" />
+  </picture>
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./src/assets/img2.jpg" />
+    <img src="./src/assets/img2.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2); max-width: 100%;" />
+  </picture>
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./src/assets/img3.jpg" />
+    <img src="./src/assets/img3.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2); max-width: 100%;" />
+  </picture>
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./src/assets/img4.jpg" />
+    <img src="./src/assets/img4.jpg" alt="Profile" width="180" height="180" style="object-fit: cover; border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2); max-width: 100%;" />
+  </picture>
+
 </div>  
+
 
 ---
 
