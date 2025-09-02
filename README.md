@@ -1,44 +1,55 @@
-# 🌟 My React Portfolio
+# 🌟 My React Portfolio  
 
-<img src="./src/assets/img1.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-<img src="./src/assets/img2.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-<img src="./src/assets/img4.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-<img src="./src/assets/img3.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
-
-
-🚀 A modern and responsive **React Portfolio Website** showcasing my skills, projects, and contact information.  
-
----
-
-## ✨ Features
-
-- 🎨 **Beautiful UI** with TailwindCSS + custom CSS  
-- 📱 **Fully Responsive** (Mobile + Tablet + Desktop)  
-- ⚡ Smooth **Framer Motion animations**  
-- 🧑‍💻 Projects showcase with live demo & GitHub links  
-- 📩 Contact section with form  
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <img src="./src/assets/img1.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+  <img src="./src/assets/img2.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+  <img src="./src/assets/img3.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+  <img src="./src/assets/img4.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+</div>  
 
 ---
 
-## 🛠️ Tech Stack
+🚀 A modern and fully responsive **React Portfolio Website** to showcase my **skills, projects, resume, and contact information**.  
+It’s designed with clean UI, smooth animations, and a professional touch.  
 
-- ⚛️ **React.js**  
-- 🎨 **Tailwind CSS**  
-- 🎞️ **Framer Motion**  
-- 📧 EmailJS (for contact form)  
+🔗 **Live Demo**: [View Portfolio](https://your-portfolio-link.com)  
+📂 **GitHub Repo**: [Portfolio Repository](https://github.com/yourusername/portfolio)  
 
 ---
 
-## 📂 Folder Structure
+## ✨ Features  
+
+- 🎨 **Beautiful Modern UI** (TailwindCSS + custom CSS)  
+- 📱 **Fully Responsive Design** (Desktop / Tablet / Mobile)  
+- ⚡ **Framer Motion Animations** for smooth interactions  
+- 🧑‍💻 **Projects Showcase** with live demo & GitHub links  
+- 📜 **Resume Download Section**  
+- 📩 **Contact Form with EmailJS** integration  
+
+---
+
+## 🛠️ Tech Stack  
+
+- ⚛️ **React.js** (Frontend Library)  
+- 🎨 **Tailwind CSS** (Styling)  
+- 🎞️ **Framer Motion** (Animations)  
+- 📧 **EmailJS** (Contact Form Handling)  
+- 🔗 **React Router** (Navigation)  
+
+---
+
+## 📂 Folder Structure  
 
 ```bash
 portfolio/
 ├── public/
-│   ├── profile.png
-│   └── favicon.ico
+│   ├── favicon.ico
+│   └── profile.png
 ├── src/
-│   ├── components/
-│   ├── assets/
+│   ├── assets/        # Images, icons, etc.
+│   ├── components/    # Reusable components
+│   ├── pages/         # Page sections (Home, About, Projects, Contact)
 │   ├── App.jsx
-│   └── index.css
+│   ├── index.css
+│   └── main.jsx
 └── package.json
