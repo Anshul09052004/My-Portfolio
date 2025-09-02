@@ -1,13 +1,44 @@
-# React + Vite
+# 🌟 My React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./src/assets/img1.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+<img src="./src/assets/img2.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+<img src="./src/assets/img4.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
+<img src="./src/assets/img3.jpg" alt="Profile" width="150" style="border-radius:50%; box-shadow:0px 4px 12px rgba(0,0,0,0.2)" />
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 A modern and responsive **React Portfolio Website** showcasing my skills, projects, and contact information.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Anshul-s-Portfolio
+## ✨ Features
+
+- 🎨 **Beautiful UI** with TailwindCSS + custom CSS  
+- 📱 **Fully Responsive** (Mobile + Tablet + Desktop)  
+- ⚡ Smooth **Framer Motion animations**  
+- 🧑‍💻 Projects showcase with live demo & GitHub links  
+- 📩 Contact section with form  
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ **React.js**  
+- 🎨 **Tailwind CSS**  
+- 🎞️ **Framer Motion**  
+- 📧 EmailJS (for contact form)  
+
+---
+
+## 📂 Folder Structure
+
+```bash
+portfolio/
+├── public/
+│   ├── profile.png
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   ├── assets/
+│   ├── App.jsx
+│   └── index.css
+└── package.json

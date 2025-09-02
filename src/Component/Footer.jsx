@@ -16,7 +16,7 @@ function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           {/* Title */}
           <div className="text-center mb-8">
-            <p className="text-3xl font-bold">🔗Footer</p>
+            <p className="text-3xl font-bold">🔗 Footer</p>
             <div className="mx-auto w-32 h-1.5 bg-amber-300 rounded-full mt-2"></div>
           </div>
 
@@ -95,8 +95,9 @@ function Footer() {
           {/* Copyright */}
           <p className="mt-10 text-center text-gray-400 text-sm md:text-base">
             © {new Date().getFullYear()}{" "}
-            <span className="text-amber-300 font-semibold">
-              AnshulPortfolio
+            
+            <span className="text-amber-300 font-semibold ml-1 mr-1 ">
+              Anshul Prajapat
             </span>
             . All rights reserved.
           </p>

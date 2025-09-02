@@ -26,11 +26,11 @@ function Home() {
                     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 px-6 md:px-12">
 
                         {/* Left: Profile Image */}
-                        <div className="flex md:justify-start w-full md:w-1/2">
+                        <div className=" flex md:justify-start w-full md:w-1/2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 1024 1024"
-                                className="ml-11 w-48 h-48 md:w-60 md:h-60 rounded-full shadow-lg shadow-amber-500/20 border-4 border-gray-500 bg-transparent p-4"
+                                className="ml-7 w-48 h-48 md:w-60 md:h-60 rounded-full shadow-lg shadow-amber-500/20 border-4 border-gray-500 bg-transparent p-4"
                             >
                                 <g
                                     fill="none"
@@ -60,20 +60,20 @@ function Home() {
                         {/* Right: Content */}
                         <div className="text-center md:text-left w-full md:w-1/2 mt-6 md:mt-0">
                             <p className="text-white text-3xl md:text-5xl font-bold">
-                                Hi, I'm  <span className="text-amber-300"> Anshul Prajapat </span>
+                                Hi, I'm  <span className=" ml-1  text-amber-300"> Anshul Prajapat </span>
                             </p>
                             <p className="text-lg md:text-2xl text-amber-100 mt-4 leading-relaxed">
                                 Full Stack Developer passionate about creating beautiful and functional web applications
                             </p>
 
                             {/* Buttons */}
-                            <div className="mt-8 flex flex-row sm:flex-row gap-4 justify-center md:justify-start">
+                            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                                 <Link to="project" smooth duration={1500}>
-                                    <button className=" text-lg hover:bg-amber-300 hover:-translate-y-0.5 transition-all duration-300 px-6 py-3 bg-amber-200 rounded-2xl font-medium ">
+                                    <button className=" text-lg hover:bg-amber-300 hover:-translate-y-0.5 transition-all duration-300 px-8 py-3 bg-amber-200 rounded-2xl font-medium ">
                                         View My Work
                                     </button>
                                 </Link>
-                                <button className=" text-xl hover:-translate-y-0.5 transition-all duration-300 hover:bg-amber-300 px-6 py-3 bg-amber-200 rounded-2xl font-medium  flex items-center gap-2">
+                                <button className=" m-auto text-xl hover:-translate-y-0.5 transition-all duration-300 hover:bg-amber-300 px-1 py-3 bg-amber-200 rounded-2xl font-medium  flex items-center gap-2 md:px-6">
                                     <MdOutlineFileDownload className="text-3xl" />
                                     Download Resume
                                 </button>
