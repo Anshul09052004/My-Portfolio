@@ -1,64 +1,59 @@
 import { useState } from "react";
-import AboutImage from "../assets/AboutImage.png";
 import { motion } from "framer-motion";
+import Shoppify from '../../public/Shoppify.png';
+import { FaArrowRight } from "react-icons/fa6";
 
 function Project() {
-  const [activeCard, setActiveCard] = useState(null);
+  const [showInfo, setShowInfo] = useState(false);
 
-  const handleCardClick = (id, link) => {
-    if (window.innerWidth < 768) {
-      // 👉 Sirf mobile ke liye click logic
-      if (activeCard === id) {
-        window.open(link, "_blank", "noopener,noreferrer");
-        setActiveCard(null);
-      } else {
-        setActiveCard(id);
-      }
-    }
-  };
+  const toggleInfo = () => setShowInfo(!showInfo);
 
   return (
-    <section id="project" className="py-16 px-4">
+    <section id="project" className="py-16 px-4 bg-gray-900">
       <motion.div
-        className="text-white font-bold"
-        initial={{ opacity: 0, y: 100 }}           // start position (hidden)
-        whileInView={{ opacity: 1, y: 0 }}        // scroll hoke view me aaye to animate
+        className="text-white font-bold max-w-6xl mx-auto"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}                 // ek hi baar chale
+        viewport={{ once: true }}
       >
-        <div className="text-center mb-8">
-          <p className="text-white text-3xl mb-2">💻 Latest Projects</p>
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <p className="text-3xl font-bold mb-2">💻 Latest Projects</p>
           <div className="mx-auto w-40 h-2 bg-amber-300 rounded-full"></div>
         </div>
 
-        <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
+        {/* Project Card */}
+        <div
+          className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
+          onClick={toggleInfo} // Mobile tap toggle
+        >
+          <img src={Shoppify} alt="Shoppify Project" className="w-full h-auto" />
+
+          {/* Overlay */}
           <div
-            onClick={() =>
-              handleCardClick("prompt-engineer", "https://github.com/Anshul09052004")
-            }
-            className="relative group flex-grow transition-all w-56 h-[400px] duration-500 md:hover:w-full block cursor-pointer"
+            className={`absolute inset-0 flex flex-col justify-end p-4 bg-black/60 transition-all duration-300 ${showInfo ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+              }`}
           >
-            <img
-              className="h-full w-full object-cover object-center"
-              src={AboutImage}
-              alt="image"
-            />
-            <div
-              className={`absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 transition-all duration-300 
-              ${activeCard === "prompt-engineer" ? "opacity-100" : "opacity-0"} 
-              md:opacity-0 md:group-hover:opacity-100`}
+            <h1 className="text-3xl ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-400 to-white animate-gradient">
+              E-Commerce Website - Shopper
+            </h1>
+
+            <a
+              className="text-white mt-4 flex items-center"
+              href="https://shoppify-app.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()} // link पर click toggle को block करे
             >
-              <h1 className="text-3xl">Prompt engineers</h1>
-              <p className="text-sm">
-                Bridging the gap between human intent and machine understanding
-                through expert prompt design.
-              </p>
-            </div>
+              Click to Visit
+              <span className="ml-2">
+                <FaArrowRight />
+              </span>
+            </a>
           </div>
         </div>
-
       </motion.div>
-
     </section>
   );
 }

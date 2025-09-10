@@ -4,17 +4,19 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { motion } from 'framer-motion'
-import HomeImage from '../assets/HomeImage.png'
+import resumepdf from '../../public/AnshulPrajapatResume.pdf'
+import "./home.css";
 
+const openresume = () => {
+    window.open(resumepdf, '_blank')
+}
 
 function Home() {
-
-
     return (
         <>
             <section
                 id="home"
-                className="pt-32 md:pt-80 pb-16 bg-gradient-to-b from-gray-900 to-black"
+                className="pt-40 md:pt-70 pb-46 md:pb-25 bg-gradient-to-b from-gray-900 to-black"
             >
                 <motion.div
                     className="text-black font-bold"
@@ -26,7 +28,7 @@ function Home() {
                     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 px-6 md:px-12">
 
                         {/* Left: Profile Image */}
-                        <div className=" flex md:justify-start w-full md:w-1/2">
+                        <div className="hidden md:flex md:justify-start w-full md:w-1/2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 1024 1024"
@@ -59,8 +61,10 @@ function Home() {
 
                         {/* Right: Content */}
                         <div className="text-center md:text-left w-full md:w-1/2 mt-6 md:mt-0">
-                            <p className="text-white text-3xl md:text-5xl font-bold">
-                                Hi, I'm  <span className=" ml-1  text-amber-300"> Anshul Prajapat </span>
+                            <p className="text-white text-4xl md:text-5xl font-bold">
+                                Hi, I'm  <span className=" text-4xl ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-pink-500 to-purple-500 animate-gradient">
+                                    Anshul Prajapat
+                                </span>
                             </p>
                             <p className="text-lg md:text-2xl text-amber-100 mt-4 leading-relaxed">
                                 Full Stack Developer passionate about creating beautiful and functional web applications
@@ -73,7 +77,9 @@ function Home() {
                                         View My Work
                                     </button>
                                 </Link>
-                                <button className=" m-auto text-xl hover:-translate-y-0.5 transition-all duration-300 hover:bg-amber-300 px-1 py-3 bg-amber-200 rounded-2xl font-medium  flex items-center gap-2 md:px-6">
+                                <button
+                                    onClick={openresume}
+                                    className=" m-auto text-xl hover:-translate-y-0.5 transition-all duration-300 hover:bg-amber-300 px-1 py-3 bg-amber-200 rounded-2xl font-medium  flex items-center gap-2 md:px-6">
                                     <MdOutlineFileDownload className="text-3xl" />
                                     Download Resume
                                 </button>
