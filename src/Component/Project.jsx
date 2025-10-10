@@ -1,13 +1,28 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Shoppify from '../../public/Shoppify.png';
+import Shoppify from "../../public/Shoppify.png";
+import HealthQueue from "../../public/HealthQueue.png";
 import { FaArrowRight } from "react-icons/fa6";
-import HealthQueue from '../../public/HealthQueue.png';
 
 function Project() {
-  const [showInfo, setShowInfo] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleInfo = () => setShowInfo(!showInfo);
+  const projects = [
+    {
+      title: "E-Commerce Website - Shopper",
+      img: Shoppify,
+      link: "https://shoppify-app.vercel.app",
+    },
+    {
+      title: "Doctor Appointment Booking System",
+      img: HealthQueue,
+      link: "https://healthqueue-frontend.onrender.com",
+    },
+  ];
+
+  const toggleInfo = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section id="project" className="py-16 px-4 bg-gray-900">
@@ -24,69 +39,50 @@ function Project() {
           <div className="mx-auto w-40 h-2 bg-amber-300 rounded-full"></div>
         </div>
 
-        {/* Project Card */}
-        <div
-          className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
-          onClick={toggleInfo} // Mobile tap toggle
-        >
-          <img src={Shoppify} alt="Shoppify Project" className="w-full h-auto" />
-
-          {/* Overlay */}
-          <div
-            className={`absolute inset-0 flex flex-col justify-end p-4 bg-black/60 transition-all duration-300 ${showInfo ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-              }`}
-          >
-            <h1 className="text-3xl ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-400 to-white animate-gradient">
-              E-Commerce Website - Shopper
-            </h1>
-
-            <a
-              className="text-white mt-4 flex items-center"
-              href="https://shoppify-app.vercel.app"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(e) => e.stopPropagation()} 
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="relative group overflow-hidden rounded-xl shadow-xl cursor-pointer border border-gray-700 hover:border-amber-400 transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl"
+              onClick={() => toggleInfo(index)}
             >
-              Click to Visit
-              <span className="ml-2">
-                <FaArrowRight />
-              </span>
-            </a>
-          </div>
+              {/* Image with Zoom Effect */}
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
+              {/* Card Title */}
+              <h1 className="text-center text-2xl font-semibold mt-3 mb-4 text-amber-300 tracking-wide">
+                {project.title}
+              </h1>
 
-        </div>
+              {/* Overlay */}
+              <div
+                className={`absolute inset-0 flex flex-col justify-end items-center p-6 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                  activeIndex === index ? "opacity-100" : ""
+                }`}
+              >
+                <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-400 to-white animate-gradient opacity-0 group-hover:opacity-100 transform translate-y-5 group-hover:translate-y-0 transition-all duration-300 text-center">
+                  {project.title}
+                </h1>
 
-        <div
-          className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
-          onClick={toggleInfo}
-        >
-          <img src={HealthQueue} alt="Doctor Appointment Project" className="w-full h-auto" />
-
-          {/* Overlay */}
-          <div
-            className={`absolute inset-0 flex flex-col justify-end p-4 bg-black/60 transition-all duration-300 ${showInfo ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-              }`}
-          >
-            <h1 className="text-3xl ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-400 to-white animate-gradient">
-              Doctor Appointment Booking System
-            </h1>
-
-            <a
-              className="text-white mt-4 flex items-center"
-              href="https://healthqueue-frontend.onrender.com"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(e) => e.stopPropagation()} 
-            >
-              Click to Visit
-              <span className="ml-2">
-                <FaArrowRight />
-              </span>
-            </a>
-          </div>
-
-
+                {/* Attractive Button */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="mt-6 px-6 py-3 bg-white/90 text-gray-900 font-bold rounded-full shadow-xl transform transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-amber-400 hover:via-yellow-300 hover:to-amber-500 hover:text-white"
+                >
+                  Click to Visit
+                  <FaArrowRight className="ml-2 inline-block" />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </motion.div>
     </section>
