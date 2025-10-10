@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Shoppify from '../../public/Shoppify.png';
 import { FaArrowRight } from "react-icons/fa6";
+import HealthQueue from '../../public/HealthQueue.png';
 
 function Project() {
   const [showInfo, setShowInfo] = useState(false);
@@ -44,7 +45,7 @@ function Project() {
               href="https://shoppify-app.vercel.app"
               target="_blank"
               rel="noreferrer"
-              onClick={(e) => e.stopPropagation()} // link पर click toggle को block करे
+              onClick={(e) => e.stopPropagation()} 
             >
               Click to Visit
               <span className="ml-2">
@@ -52,6 +53,40 @@ function Project() {
               </span>
             </a>
           </div>
+
+
+        </div>
+
+        <div
+          className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
+          onClick={toggleInfo}
+        >
+          <img src={HealthQueue} alt="Doctor Appointment Project" className="w-full h-auto" />
+
+          {/* Overlay */}
+          <div
+            className={`absolute inset-0 flex flex-col justify-end p-4 bg-black/60 transition-all duration-300 ${showInfo ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+              }`}
+          >
+            <h1 className="text-3xl ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-400 to-white animate-gradient">
+              Doctor Appointment Booking System
+            </h1>
+
+            <a
+              className="text-white mt-4 flex items-center"
+              href="https://healthqueue-frontend.onrender.com"
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()} 
+            >
+              Click to Visit
+              <span className="ml-2">
+                <FaArrowRight />
+              </span>
+            </a>
+          </div>
+
+
         </div>
       </motion.div>
     </section>

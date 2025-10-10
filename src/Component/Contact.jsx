@@ -55,7 +55,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 px-6 md:px-20 text-white bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+    <section className="py-16 px-6 md:px-20 text-white bg-gradient-to-b from-gray-900 via-gray-800 to-black">
       <motion.div
         className="text-white font-bold"
         initial={{ opacity: 0, y: 100 }}           // start position (hidden)
