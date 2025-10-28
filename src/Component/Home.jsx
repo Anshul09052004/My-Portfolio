@@ -73,7 +73,7 @@ function Home() {
                             {/* Buttons */}
                             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                                 <Link to="project" smooth duration={1500}>
-                                    <button className=" text-lg hover:bg-amber-300 hover:-translate-y-0.5 transition-all duration-300 px-8 py-3 bg-amber-200 rounded-2xl font-medium ">
+                                    <button className=" text-lg hover:bg-amber-300 hover:-translate-y-0.5 transition-all duration-300 px-8 py-3 bg-amber-200  rounded-2xl font-medium ">
                                         View My Work
                                     </button>
                                 </Link>
@@ -86,7 +86,7 @@ function Home() {
                             </div>
 
                             {/* Social Icons */}
-                            <div className="flex justify-center md:justify-start gap-6 border-2 border-amber-300 rounded-3xl pl-6 pr-3 py-3 mt-10
+                            <div className="flex justify-center md:justify-start gap-6 border-2 border-[#00F0FF]  rounded-3xl pl-6 pr-3 py-3 mt-10
                         md:border-none md:gap-10 
                         ">
                                 <a href="https://github.com/Anshul09052004" target="_blank" rel="noreferrer">

@@ -16,7 +16,7 @@ function About() {
                     <p className="text-white text-3xl md:text-4xl font-bold mb-3">
                       📖 About Me
                     </p>
-                    <div className=" mx-auto w-20 md:w-24 h-1 bg-amber-400 rounded-full"></div>
+                    <div className=" mx-auto w-20 md:w-24 h-1 bg-[#00F0FF] rounded-full"></div>
                 </div>
 
                 {/* Sub heading */}

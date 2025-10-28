@@ -55,7 +55,7 @@ function Contact() {
   };
 
   return (
-    <section className="py-16 px-6 md:px-20 text-white bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+    <section id="contact" className="py-16 px-6 md:px-20 text-white bg-gradient-to-b from-gray-900 via-gray-800 to-black">
       <motion.div
         className="text-white font-bold"
         initial={{ opacity: 0, y: 100 }}           // start position (hidden)
@@ -66,7 +66,7 @@ function Contact() {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-3">📞 Contact Me</h2>
-          <div className="mx-auto w-36 h-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full"></div>
+          <div className="mx-auto w-36 h-1.5 bg-[#00F0FF] rounded-full"></div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-12">

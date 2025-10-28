@@ -3,20 +3,21 @@ import { motion } from "framer-motion";
 import Shoppify from "../../public/Shoppify.png";
 import HealthQueue from "../../public/HealthQueue.png";
 import { FaArrowRight } from "react-icons/fa6";
+import ResumeBuilder from "../../public/ResumeBuilder.png";
 
 function Project() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const projects = [
     {
-      title: "E-Commerce Website - Shopper",
-      img: Shoppify,
-      link: "https://shoppify-app.vercel.app",
-    },
-    {
       title: "Doctor Appointment Booking System",
       img: HealthQueue,
       link: "https://healthqueue-frontend.onrender.com",
+    },
+    {
+      title: "AI Powered Resume Builder",
+      img: ResumeBuilder,
+      link: "https://ai-resume-builder-66fo.vercel.app/",
     },
   ];
 
@@ -36,7 +37,7 @@ function Project() {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <p className="text-3xl font-bold mb-2">💻 Latest Projects</p>
-          <div className="mx-auto w-40 h-2 bg-amber-300 rounded-full"></div>
+          <div className="mx-auto w-40 h-2 bg-[#00F0FF] rounded-full"></div>
         </div>
 
         {/* Projects Grid */}
@@ -61,9 +62,8 @@ function Project() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col justify-end items-center p-6 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                  activeIndex === index ? "opacity-100" : ""
-                }`}
+                className={`absolute inset-0 flex flex-col justify-end items-center p-6 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${activeIndex === index ? "opacity-100" : ""
+                  }`}
               >
                 <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-400 to-white animate-gradient opacity-0 group-hover:opacity-100 transform translate-y-5 group-hover:translate-y-0 transition-all duration-300 text-center">
                   {project.title}

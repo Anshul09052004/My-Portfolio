@@ -61,7 +61,7 @@ function Skill() {
           {/* Heading */}
           <div className="text-center mb-16">
             <p className="text-white text-4xl font-bold mb-4">⚡Skills </p>
-            <div className="mx-auto w-40 h-2 bg-amber-400 rounded-full"></div>
+            <div className="mx-auto w-40 h-2 bg-[#00F0FF] rounded-full"></div>
             <p className="text-gray-300 max-w-2xl mx-auto mt-6">
               Technologies and tools I work with to bring ideas to life
             </p>

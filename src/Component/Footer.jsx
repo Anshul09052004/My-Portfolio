@@ -14,12 +14,8 @@ function Footer() {
         viewport={{ once: true }}                 // ek hi baar chale
       >
         <div className="max-w-7xl mx-auto flex flex-col items-center">
-          {/* Title */}
-          <div className="text-center mb-8">
-            <p className="text-3xl font-bold">🔗 Footer</p>
-            <div className="mx-auto w-32 h-1.5 bg-amber-300 rounded-full mt-2"></div>
-          </div>
-
+        
+    
           {/* Navigation Links */}
           <div className="flex flex-col items-center gap-4 text-lg font-medium md:flex-row md:gap-10">
             <Link
@@ -70,7 +66,7 @@ function Footer() {
               href="https://github.com/Anshul09052004"
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-full border border-amber-300 hover:bg-amber-300 hover:text-black transition-all duration-300"
+              className="p-3 rounded-full border border-[#00F0FF]  hover:bg-amber-300 hover:text-black transition-all duration-300"
             >
               <FaGithub className="text-2xl" />
             </a>
@@ -78,7 +74,7 @@ function Footer() {
               href="https://www.linkedin.com/in/anshul-prajapat/"
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-full border border-amber-300 hover:bg-amber-300 hover:text-black transition-all duration-300"
+              className="p-3 rounded-full border border-[#00F0FF]  hover:bg-amber-300 hover:text-black transition-all duration-300"
             >
               <FaLinkedinIn className="text-2xl" />
             </a>
@@ -86,7 +82,7 @@ function Footer() {
               href="mailto:anshulprajapat982@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-full border border-amber-300 hover:bg-amber-300 hover:text-black transition-all duration-300"
+              className="p-3 rounded-full border border-[#00F0FF] hover:bg-amber-300 hover:text-black transition-all duration-300"
             >
               <MdOutlineEmail className="text-2xl" />
             </a>
