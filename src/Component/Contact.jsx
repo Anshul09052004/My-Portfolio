@@ -9,6 +9,7 @@ import { FaPhone } from "react-icons/fa6";
 
 function Contact() {
   const form = useRef();
+  
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
