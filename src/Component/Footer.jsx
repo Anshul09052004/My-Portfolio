@@ -22,7 +22,7 @@ function Footer() {
               className="cursor-pointer hover:text-amber-300 transition-all"
               to="home"
               smooth={true}
-              duration={1500}
+              duration={600}
             >
               Home
             </Link>
@@ -30,7 +30,7 @@ function Footer() {
               className="cursor-pointer hover:text-amber-300 transition-all"
               to="about"
               smooth={true}
-              duration={1500}
+              duration={600}
             >
               About
             </Link>
@@ -38,7 +38,7 @@ function Footer() {
               className="cursor-pointer hover:text-amber-300 transition-all"
               to="skill"
               smooth={true}
-              duration={1500}
+              duration={600}
             >
               Skill
             </Link>
@@ -46,7 +46,7 @@ function Footer() {
               className="cursor-pointer hover:text-amber-300 transition-all"
               to="project"
               smooth={true}
-              duration={1500}
+              duration={600}
             >
               Project
             </Link>
@@ -54,7 +54,7 @@ function Footer() {
               className="cursor-pointer hover:text-amber-300 transition-all"
               to="contact"
               smooth={true}
-              duration={1500}
+              duration={600}
             >
               Contact
             </Link>
@@ -66,7 +66,7 @@ function Footer() {
               href="https://github.com/Anshul09052004"
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-full border border-[#00F0FF]  hover:bg-amber-300 hover:text-black transition-all duration-300"
+              className="p-3 rounded-full border border-[#8597c1]  hover:bg-amber-300 hover:text-black transition-all duration-300"
             >
               <FaGithub className="text-2xl" />
             </a>
@@ -74,7 +74,7 @@ function Footer() {
               href="https://www.linkedin.com/in/anshul-prajapat/"
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-full border border-[#00F0FF]  hover:bg-amber-300 hover:text-black transition-all duration-300"
+              className="p-3 rounded-full border border-[#8597c1]  hover:bg-amber-300 hover:text-black transition-all duration-300"
             >
               <FaLinkedinIn className="text-2xl" />
             </a>
@@ -82,7 +82,7 @@ function Footer() {
               href="mailto:anshulprajapat982@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-full border border-[#00F0FF] hover:bg-amber-300 hover:text-black transition-all duration-300"
+              className="p-3 rounded-full border border-[#8597c1] hover:bg-amber-300 hover:text-black transition-all duration-300"
             >
               <MdOutlineEmail className="text-2xl" />
             </a>

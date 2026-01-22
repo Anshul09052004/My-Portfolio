@@ -24,12 +24,20 @@ function Navigation() {
 
     return (
         <nav
-            className={`flex justify-between items-center text-black text-xl p-6 md:p-4 fixed top-0 left-0 right-0 bg-[#00F0FF]  z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'
+            className={`flex justify-between items-center text-white text-xl p-6 md:p-4 fixed top-0 left-0 right-0 bg-[#0f172a]  z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'
                 }`}
         >
-            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent font-bold text-3xl md:text-5xl">
-                anshul's Portfolio
+            <div className="cursor-pointer select-none">
+                <h1 className="text-3xl md:text-4xl font-extrabold 
+    bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-500
+    bg-clip-text text-transparent
+    tracking-wide
+    hover:opacity-90 transition duration-300">
+                    Anshul's<span className="text-white"></span>
+                    <span className="ml-2 font-semibold">Portfolio</span>
+                </h1>
             </div>
+
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
@@ -53,7 +61,7 @@ function Navigation() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="absolute top-full right-0 bg-[#00F0FF]  text-black rounded-b-3xl px-8 py-8 text-xl flex flex-col space-y-4 md:hidden z-50">
+                <div className="absolute top-full right-0 bg-[#0f172a] text-white rounded-b-3xl px-8 py-8 text-xl flex flex-col space-y-4 md:hidden z-50">
                     <Link to="home" smooth duration={600} className="hover:text-sky-500" onClick={() => setIsOpen(false)}>Home</Link>
                     <Link to="about" smooth duration={600} className="hover:text-sky-500" onClick={() => setIsOpen(false)}>About</Link>
                     <Link to="skill" smooth duration={600} className="hover:text-sky-500" onClick={() => setIsOpen(false)}>Skill</Link>
